@@ -82,13 +82,13 @@ for stop,days in stop_data.iteritems():
 
     better_regr = sm.OLS(new_y,new_x).fit()
 
-    if stop == '40790' or stop == 40790:
-        g = open('monroe_state.csv','wb')
-        csv_writer = csv.writer(g)
-        values = better_regr.predict()
-        for i,a in enumerate(better_regr.resid):
-            csv_writer.writerow([a,values[i]])
-        break
+    # if stop == '40790' or stop == 40790:
+    #     g = open('monroe_state.csv','wb')
+    #     csv_writer = csv.writer(g)
+    #     values = better_regr.predict()
+    #     for i,a in enumerate(better_regr.resid):
+    #         csv_writer.writerow([a,values[i]])
+    #     break
 
 
     filename = stop_name[stop]
